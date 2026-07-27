@@ -8,7 +8,7 @@ meta-layer selects the threshold, then the final meta-layer is fit on all OOF
 features. No test-cohort ranking is used.
 """
 from pathlib import Path
-import json, sys, time
+import argparse, json, sys, time
 
 import joblib
 import numpy as np
@@ -24,7 +24,7 @@ from torch.utils.data import DataLoader, Dataset
 from torchvision import models, transforms
 from torchvision.io import read_image
 
-ROOT = Path(r"D:\pneumonia_two_stage_study")
+ROOT = Path(__file__).resolve().parents[1]
 ART, REP = ROOT / "artifacts", ROOT / "reports"
 SEED, FOLDS = 20260719, 5
 
@@ -67,6 +67,12 @@ def optimal_threshold(y,p):
 
 
 def main():
+    global ROOT, ART, REP
+    parser = argparse.ArgumentParser(description="Build the fixed-transform GroupKFold Stage-2 stack.")
+    parser.add_argument("--project-root", type=Path, default=ROOT)
+    args = parser.parse_args()
+    ROOT = args.project_root.resolve()
+    ART, REP = ROOT / "artifacts", ROOT / "reports"
     torch.manual_seed(SEED); np.random.seed(SEED)
     manifest=pd.read_csv(ROOT/"data"/"processed"/"manifest.csv")
     dev=manifest[(manifest.stage1==1)&(manifest.split.isin(["train","val"]))].reset_index(drop=True)

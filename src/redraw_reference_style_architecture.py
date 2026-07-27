@@ -1,10 +1,11 @@
 from pathlib import Path
+import os
 import matplotlib as mpl
 import matplotlib.pyplot as plt
 from matplotlib.patches import FancyBboxPatch, Rectangle, Circle, Arc, Polygon
 import numpy as np
 
-ROOT=Path(r"D:\pneumonia_two_stage_study")
+ROOT=Path(os.environ.get("PNEUMONIA_PROJECT_ROOT", Path(__file__).resolve().parents[1]))
 OUT=ROOT/"reports"/"figures"/"nature_redesign"
 OUT.mkdir(parents=True,exist_ok=True)
 mpl.rcParams.update({"font.family":"sans-serif","font.sans-serif":["Arial","Microsoft YaHei","DejaVu Sans"],

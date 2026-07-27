@@ -1,12 +1,13 @@
 """Publication figure for locked-test end-to-end cascade evaluation."""
 from pathlib import Path
 import json
+import os
 
 import matplotlib as mpl
 import matplotlib.pyplot as plt
 import numpy as np
 
-ROOT = Path(r"D:\pneumonia_two_stage_study")
+ROOT = Path(os.environ.get("PNEUMONIA_PROJECT_ROOT", Path(__file__).resolve().parents[1]))
 REPORTS = ROOT / "reports"
 OUT = REPORTS / "figures" / "nature_redesign"
 
