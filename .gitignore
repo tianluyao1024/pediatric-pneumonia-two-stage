@@ -3,6 +3,7 @@ data/raw/
 data/processed/
 models/
 artifacts/
+reports/
 *.pt
 *.pth
 *.ckpt
