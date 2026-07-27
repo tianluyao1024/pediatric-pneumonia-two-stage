@@ -4,7 +4,18 @@ from __future__ import annotations
 
 import argparse
 import csv
+import re
 from pathlib import Path
+
+
+WINDOWS_PATH = re.compile(r"^[A-Za-z]:[\\\\/]")
+
+
+def sanitize_value(value: str) -> str:
+    """Replace absolute local paths with their non-identifying basename."""
+    if WINDOWS_PATH.match(value) or value.startswith("/"):
+        return Path(value.replace("\\", "/")).name
+    return value
 
 
 def sanitize_csv(source: Path, destination: Path) -> None:
@@ -20,6 +31,7 @@ def sanitize_csv(source: Path, destination: Path) -> None:
             for row in reader:
                 if "path" in row:
                     row["image_id"] = Path(row.pop("path")).name
+                row = {key: sanitize_value(value) for key, value in row.items()}
                 writer.writerow(row)
 
 

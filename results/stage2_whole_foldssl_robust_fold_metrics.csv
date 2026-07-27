@@ -1,6 +1,6 @@
 fold,n_train,n_val,n_train_groups,n_val_groups,best_val_auc,ssl_checkpoint,strict_fold_specific_ssl
-1,3084,772,1910,477,0.7619650010541852,D:\pneumonia_two_stage_study\models\ssl_groupfold\pediatric_simsiam_efficientnet_b0_fold1_best.pt,True
-2,3085,771,1910,477,0.7704554409210967,D:\pneumonia_two_stage_study\models\ssl_groupfold\pediatric_simsiam_efficientnet_b0_fold2_best.pt,True
-3,3085,771,1910,477,0.7853401118768737,D:\pneumonia_two_stage_study\models\ssl_groupfold\pediatric_simsiam_efficientnet_b0_fold3_best.pt,True
-4,3085,771,1909,478,0.806062428720961,D:\pneumonia_two_stage_study\models\ssl_groupfold\pediatric_simsiam_efficientnet_b0_fold4_best.pt,True
-5,3085,771,1909,478,0.793367457284983,D:\pneumonia_two_stage_study\models\ssl_groupfold\pediatric_simsiam_efficientnet_b0_fold5_best.pt,True
+1,3084,772,1910,477,0.7619650010541852,pediatric_simsiam_efficientnet_b0_fold1_best.pt,True
+2,3085,771,1910,477,0.7704554409210967,pediatric_simsiam_efficientnet_b0_fold2_best.pt,True
+3,3085,771,1910,477,0.7853401118768737,pediatric_simsiam_efficientnet_b0_fold3_best.pt,True
+4,3085,771,1909,478,0.806062428720961,pediatric_simsiam_efficientnet_b0_fold4_best.pt,True
+5,3085,771,1909,478,0.793367457284983,pediatric_simsiam_efficientnet_b0_fold5_best.pt,True

@@ -1,0 +1,9 @@
+{
+  "model": "fixed_50_50_imagenet_ssl_oof_fusion",
+  "evaluation": "paired development OOF point estimates",
+  "weight_search": false,
+  "exploratory_test_information_used": false,
+  "n": 3856,
+  "roc_auc": 0.8428384803186704,
+  "pr_auc": 0.7378046849677744
+}

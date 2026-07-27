@@ -75,16 +75,21 @@ $env:PNEUMONIA_PROJECT_ROOT = $root
 # 4. Audit available Stage-2 prediction files and calculate grouped statistics
 & $python -m src.stage2_compare_select_nextgen --project-root $root
 
-# 5. Fold-specific paediatric SimSiam pretraining and OOF predictions
+# 5. Fold-specific paediatric SimSiam pretraining
 & $python -m src.stage2_ssl_pretrain_groupfold --project-root $root
 
-# 6. Fixed-transform GroupKFold stack and OOF fusion summaries
+# 6. Nested whole-image OOF models and the fixed 50:50 ImageNet-SSL fusion
+& $python -m src.stage2_whole_nested_diagnostic --project-root $root --initialization imagenet --run-name whole_nested_imagenet_simple
+& $python -m src.stage2_whole_nested_diagnostic --project-root $root --initialization ssl --run-name whole_nested_ssl_simple
+& $python -m src.assemble_fixed_oof_fusion --project-root $root
+
+# 7. Fixed-transform GroupKFold stack (a separate conditional benchmark)
 & $python -m src.stage2_oof_fixed_stack --project-root $root
 
-# 7. Route all images through the Stage-1 -> Stage-2 cascade
+# 8. Route all images through the Stage-1 -> Stage-2 cascade
 & $python -m src.evaluate_end_to_end_cascade --project-root $root
 
-# 8. Regenerate the paper figures
+# 9. Regenerate the paper figures
 & $python -m src.plot_end_to_end_cascade
 & $python -m src.redraw_reference_style_architecture
 ```

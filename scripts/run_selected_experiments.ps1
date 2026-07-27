@@ -14,5 +14,8 @@ $env:PNEUMONIA_PROJECT_ROOT = (Resolve-Path $ProjectRoot)
 & $Python -m src.export_stage2_val_predictions --project-root $ProjectRoot
 & $Python -m src.stage2_compare_select_nextgen --project-root $ProjectRoot
 & $Python -m src.stage2_ssl_pretrain_groupfold --project-root $ProjectRoot
+& $Python -m src.stage2_whole_nested_diagnostic --project-root $ProjectRoot --initialization imagenet --run-name whole_nested_imagenet_simple
+& $Python -m src.stage2_whole_nested_diagnostic --project-root $ProjectRoot --initialization ssl --run-name whole_nested_ssl_simple
+& $Python -m src.assemble_fixed_oof_fusion --project-root $ProjectRoot
 & $Python -m src.stage2_oof_fixed_stack --project-root $ProjectRoot
 & $Python -m src.evaluate_end_to_end_cascade --project-root $ProjectRoot
