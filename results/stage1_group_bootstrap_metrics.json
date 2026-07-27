@@ -1,0 +1,20 @@
+{
+  "n_images": 575,
+  "n_groups": 424,
+  "tp": 395,
+  "fn": 22,
+  "tn": 154,
+  "fp": 4,
+  "accuracy": 0.9547826086956521,
+  "accuracy_ci_low": 0.9359344660966774,
+  "accuracy_ci_high": 0.9712940811625022,
+  "sensitivity": 0.947242206235012,
+  "sensitivity_ci_low": 0.9226922335046362,
+  "sensitivity_ci_high": 0.9678164001109365,
+  "specificity": 0.9746835443037974,
+  "specificity_ci_low": 0.9459459459459459,
+  "specificity_ci_high": 0.9942857142857143,
+  "roc_auc": 0.9954011474364812,
+  "roc_auc_ci_low": 0.9914625400667858,
+  "roc_auc_ci_high": 0.9982864834813491
+}

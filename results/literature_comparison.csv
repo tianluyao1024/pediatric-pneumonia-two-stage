@@ -1,0 +1,5 @@
+study,year,dataset,task,evaluation,reported_metric,reported_value,doi,note
+Rahman et al.,2020,Kermany,Normal vs pneumonia,hold-out not identical,Accuracy,0.980,10.3390/app10093233,Also reported 0.950 accuracy for bacterial vs viral
+Kundu et al.,2021,Kermany,Normal vs pneumonia,5-fold cross-validation,ROC-AUC,0.9835,10.1371/journal.pone.0256630,Weighted ensemble of GoogLeNet ResNet-18 and DenseNet-121
+Abbasi et al.,2020,Multiple studies pooled,Normal vs pneumonia,Systematic review and meta-analysis,ROC-AUC,0.990,10.1016/j.compbiomed.2020.103898,Not a head-to-head dataset comparison
+Abbasi et al.,2020,Multiple studies pooled,Bacterial vs viral,Systematic review and meta-analysis,ROC-AUC,0.950,10.1016/j.compbiomed.2020.103898,Not a head-to-head dataset comparison

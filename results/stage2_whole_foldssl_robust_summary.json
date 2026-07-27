@@ -1,0 +1,40 @@
+{
+  "model": "whole_foldssl_robust",
+  "variant": "whole",
+  "regions": [
+    "whole"
+  ],
+  "folds": 5,
+  "original_global_invalid_stage2_masks": 493,
+  "invalid_mask_policy": "independent per-region validity with whole-image fallback",
+  "union_min_fraction": 0.08,
+  "union_max_fraction": 0.75,
+  "side_min_fraction": 0.015,
+  "region_min_pixels": 100,
+  "hilar_min_fraction": 0.001,
+  "hilar_max_fraction": 0.15,
+  "region_dropout_probability": 0.0,
+  "development_oof": {
+    "roc_auc": 0.773442816826335,
+    "pr_auc": 0.620242054001548,
+    "accuracy": 0.7448132780082988,
+    "balanced_accuracy": 0.7206874068997682,
+    "f1": 0.6350148367952523,
+    "threshold": 0.5445268154144287
+  },
+  "exploratory_test": {
+    "roc_auc": 0.7858719914596273,
+    "pr_auc": 0.679444160836616,
+    "accuracy": 0.7266187050359713,
+    "balanced_accuracy": 0.7058909161490683,
+    "f1": 0.6346153846153846,
+    "threshold": 0.5445268154144287
+  },
+  "ssl_mode": "strict_fold_specific",
+  "ssl_checkpoint_template": "models/ssl_groupfold/pediatric_simsiam_efficientnet_b0_fold{fold}_best.pt",
+  "global_ssl_checkpoint": "",
+  "fold_assignment_csv": "results/stage2_groupfold_assignments.csv",
+  "noise_weights_csv": "",
+  "selection_used_test": false,
+  "warning": "当前test已在早期开发中被查看，只能作为探索性结果。"
+}

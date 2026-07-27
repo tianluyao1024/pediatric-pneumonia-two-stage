@@ -1,0 +1,13 @@
+seed: 20260718
+image_size: 224
+batch_size: 8
+num_workers: 0
+val_fraction: 0.15
+epochs: 12
+patience: 3
+learning_rate: 0.0003
+weight_decay: 0.0001
+bootstrap_repetitions: 2000
+models:
+  baselines: [intensity_logistic, hog_linear_svm]
+  deep: [small_cnn, resnet18, efficientnet_b0, pneunet, pneunet_no_attention, pneunet_avg_pool]

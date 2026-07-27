@@ -1,0 +1,30 @@
+{
+  "model": "whole_nested_imagenet_simple",
+  "architecture": "EfficientNet-B0 dedicated whole-image head",
+  "initialization": "imagenet",
+  "evaluation": "nested group-disjoint epoch selection",
+  "folds": 5,
+  "inner_folds": 5,
+  "mean_outer_fold_auc": 0.8343042264424257,
+  "std_outer_fold_auc": 0.02803165253477369,
+  "development_oof": {
+    "roc_auc": 0.8319989958262541,
+    "pr_auc": 0.7222154443952105,
+    "accuracy": 0.779304979253112,
+    "balanced_accuracy": 0.7746897055534139,
+    "f1": 0.704,
+    "threshold": 0.3417584300041199
+  },
+  "exploratory_test": {
+    "roc_auc": 0.8620923913043478,
+    "pr_auc": 0.76341675403714,
+    "accuracy": 0.7985611510791367,
+    "balanced_accuracy": 0.7979061529503105,
+    "f1": 0.7529411764705882,
+    "threshold": 0.3417584300041199
+  },
+  "fold_assignment_csv": "results/stage2_groupfold_assignments.csv",
+  "selection_used_outer_fold": false,
+  "selection_used_test": false,
+  "warning": "The current test set was inspected during earlier development and remains exploratory."
+}

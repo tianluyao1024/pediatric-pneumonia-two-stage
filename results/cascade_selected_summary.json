@@ -1,0 +1,279 @@
+{
+  "status": "complete",
+  "final_classes": [
+    "normal",
+    "bacterial",
+    "viral"
+  ],
+  "stage1": {
+    "selected_model": "deep_ensemble",
+    "selected_threshold": 0.3114728132883708,
+    "selection_source": "reports/stage1_selected_model.json"
+  },
+  "stage2": {
+    "selected_ensemble": "equal__resnet18__efficientnet_b0__pneunet__pneunet_no_attention",
+    "members": [
+      "resnet18",
+      "efficientnet_b0",
+      "pneunet",
+      "pneunet_no_attention"
+    ],
+    "weights": {
+      "resnet18": 0.25,
+      "efficientnet_b0": 0.25,
+      "pneunet": 0.25,
+      "pneunet_no_attention": 0.25
+    },
+    "selected_threshold": 0.5753620100000001,
+    "selection_source": "reports/stage2_equal_weight_ensemble_selected.json"
+  },
+  "bootstrap": {
+    "unit": "namespace-specific filename group",
+    "repetitions": 2000,
+    "confidence_interval": "percentile 95%",
+    "seed_validation": 20260722,
+    "seed_test": 20260723
+  },
+  "splits": {
+    "val": {
+      "n_images": 582,
+      "n_filename_groups": 424,
+      "n_routed_to_stage2": 419,
+      "inference_seconds": 23.147901799995452,
+      "point_metrics": {
+        "accuracy": 0.8505154639175257,
+        "macro_recall_balanced_accuracy": 0.8585705452959417,
+        "macro_f1": 0.8469198633258964,
+        "weighted_f1": 0.8529649549404309,
+        "normal_precision": 0.950920245398773,
+        "normal_recall_sensitivity": 0.9810126582278481,
+        "normal_specificity": 0.9811320754716981,
+        "normal_f1": 0.9657320872274143,
+        "normal_support": 158.0,
+        "bacterial_precision": 0.9058823529411765,
+        "bacterial_recall_sensitivity": 0.8105263157894737,
+        "bacterial_specificity": 0.9191919191919192,
+        "bacterial_f1": 0.8555555555555555,
+        "bacterial_support": 285.0,
+        "viral_precision": 0.6646341463414634,
+        "viral_recall_sensitivity": 0.7841726618705036,
+        "viral_specificity": 0.8758465011286681,
+        "viral_f1": 0.7194719471947195,
+        "viral_support": 139.0
+      },
+      "ci95": {
+        "accuracy": {
+          "low": 0.8167524271428693,
+          "high": 0.8844269424043294
+        },
+        "macro_recall_balanced_accuracy": {
+          "low": 0.8266651095435921,
+          "high": 0.8920730566262751
+        },
+        "macro_f1": {
+          "low": 0.8150286200196188,
+          "high": 0.879232097123471
+        },
+        "weighted_f1": {
+          "low": 0.8192994065772345,
+          "high": 0.8861976711810877
+        },
+        "normal_precision": {
+          "low": 0.9146077988557664,
+          "high": 0.9820359281437125
+        },
+        "normal_recall_sensitivity": {
+          "low": 0.9559748427672956,
+          "high": 1.0
+        },
+        "normal_specificity": {
+          "low": 0.9667497868712702,
+          "high": 0.9931200515269574
+        },
+        "normal_f1": {
+          "low": 0.9428547378547378,
+          "high": 0.9853372434017595
+        },
+        "bacterial_precision": {
+          "low": 0.8526201372997712,
+          "high": 0.9489382561535252
+        },
+        "bacterial_recall_sensitivity": {
+          "low": 0.7531309162066278,
+          "high": 0.8626777823805578
+        },
+        "bacterial_specificity": {
+          "low": 0.8774121986127932,
+          "high": 0.9542296531632792
+        },
+        "bacterial_f1": {
+          "low": 0.8093125602866198,
+          "high": 0.8940690428713858
+        },
+        "viral_precision": {
+          "low": 0.5813814232001114,
+          "high": 0.7468373964681981
+        },
+        "viral_recall_sensitivity": {
+          "low": 0.704223268605717,
+          "high": 0.8620821268754935
+        },
+        "viral_specificity": {
+          "low": 0.840274731968811,
+          "high": 0.9098738552468072
+        },
+        "viral_f1": {
+          "low": 0.6540820029027576,
+          "high": 0.78210253082414
+        }
+      },
+      "confusion_matrix": {
+        "normal": {
+          "normal": 155,
+          "bacterial": 1,
+          "viral": 7
+        },
+        "bacterial": {
+          "normal": 1,
+          "bacterial": 231,
+          "viral": 23
+        },
+        "viral": {
+          "normal": 2,
+          "bacterial": 53,
+          "viral": 109
+        }
+      },
+      "error_counts": {
+        "correct": 495,
+        "stage2_subtype_error_after_correct_route": 76,
+        "stage1_false_negative_pneumonia_stopped": 8,
+        "stage1_false_positive_normal_routed": 3
+      }
+    },
+    "test": {
+      "n_images": 575,
+      "n_filename_groups": 424,
+      "n_routed_to_stage2": 404,
+      "inference_seconds": 21.843165600002976,
+      "point_metrics": {
+        "accuracy": 0.7965217391304348,
+        "macro_recall_balanced_accuracy": 0.800632092407684,
+        "macro_f1": 0.7950068597749335,
+        "weighted_f1": 0.7945687196319539,
+        "normal_precision": 0.9005847953216374,
+        "normal_recall_sensitivity": 0.9746835443037974,
+        "normal_specificity": 0.9592326139088729,
+        "normal_f1": 0.9361702127659575,
+        "normal_support": 158.0,
+        "bacterial_precision": 0.8130081300813008,
+        "bacterial_recall_sensitivity": 0.78125,
+        "bacterial_specificity": 0.8557993730407524,
+        "bacterial_f1": 0.796812749003984,
+        "bacterial_support": 256.0,
+        "viral_precision": 0.6582278481012658,
+        "viral_recall_sensitivity": 0.6459627329192547,
+        "viral_specificity": 0.8695652173913043,
+        "viral_f1": 0.6520376175548589,
+        "viral_support": 161.0
+      },
+      "ci95": {
+        "accuracy": {
+          "low": 0.7347552844394121,
+          "high": 0.8493168677878271
+        },
+        "macro_recall_balanced_accuracy": {
+          "low": 0.7470445775862442,
+          "high": 0.8516613035404184
+        },
+        "macro_f1": {
+          "low": 0.7391922889599205,
+          "high": 0.8433553396191938
+        },
+        "weighted_f1": {
+          "low": 0.7274453900519006,
+          "high": 0.8496691842962345
+        },
+        "normal_precision": {
+          "low": 0.8537976037655113,
+          "high": 0.9435090042372881
+        },
+        "normal_recall_sensitivity": {
+          "low": 0.9480500713159673,
+          "high": 0.994186886678317
+        },
+        "normal_specificity": {
+          "low": 0.938238058140295,
+          "high": 0.9773366439744109
+        },
+        "normal_f1": {
+          "low": 0.9067502679528403,
+          "high": 0.9618768328445748
+        },
+        "bacterial_precision": {
+          "low": 0.6867955423978402,
+          "high": 0.9099537914691943
+        },
+        "bacterial_recall_sensitivity": {
+          "low": 0.714267767408471,
+          "high": 0.8426994475968583
+        },
+        "bacterial_specificity": {
+          "low": 0.7569149560117302,
+          "high": 0.9326711935407587
+        },
+        "bacterial_f1": {
+          "low": 0.7222222222222222,
+          "high": 0.8586063912655237
+        },
+        "viral_precision": {
+          "low": 0.5639486108943343,
+          "high": 0.7515181224004753
+        },
+        "viral_recall_sensitivity": {
+          "low": 0.5089646673503821,
+          "high": 0.7793275862068965
+        },
+        "viral_specificity": {
+          "low": 0.8284421612888948,
+          "high": 0.908872592924317
+        },
+        "viral_f1": {
+          "low": 0.5539032530305356,
+          "high": 0.7368585526315788
+        }
+      },
+      "confusion_matrix": {
+        "normal": {
+          "normal": 154,
+          "bacterial": 5,
+          "viral": 12
+        },
+        "bacterial": {
+          "normal": 1,
+          "bacterial": 200,
+          "viral": 45
+        },
+        "viral": {
+          "normal": 3,
+          "bacterial": 51,
+          "viral": 104
+        }
+      },
+      "error_counts": {
+        "correct": 458,
+        "stage2_subtype_error_after_correct_route": 96,
+        "stage1_false_negative_pneumonia_stopped": 17,
+        "stage1_false_positive_normal_routed": 4
+      }
+    }
+  },
+  "interpretation_warning": "The current test split has already been inspected during earlier model development. Treat the end-to-end test estimate as exploratory until confirmed on an external test set or nested group cross-validation.",
+  "files": {
+    "validation_predictions": "artifacts/val_predictions_cascade_selected.csv",
+    "test_predictions": "artifacts/predictions_cascade_selected.csv",
+    "metrics": "reports/cascade_selected_metrics_ci.csv",
+    "confusion_matrices": "reports/cascade_selected_confusion_matrices.csv",
+    "error_decomposition": "reports/cascade_selected_error_decomposition.csv"
+  }
+}

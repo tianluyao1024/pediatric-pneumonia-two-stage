@@ -1,0 +1,9 @@
+split,error_type,count,fraction
+val,correct,495,0.8505154639175257
+val,stage2_subtype_error_after_correct_route,76,0.13058419243986255
+val,stage1_false_negative_pneumonia_stopped,8,0.013745704467353952
+val,stage1_false_positive_normal_routed,3,0.005154639175257732
+test,correct,458,0.7965217391304348
+test,stage2_subtype_error_after_correct_route,96,0.16695652173913045
+test,stage1_false_negative_pneumonia_stopped,17,0.029565217391304348
+test,stage1_false_positive_normal_routed,4,0.006956521739130435

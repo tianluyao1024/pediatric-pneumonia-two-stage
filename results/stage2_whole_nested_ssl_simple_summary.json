@@ -1,0 +1,30 @@
+{
+  "model": "whole_nested_ssl_simple",
+  "architecture": "EfficientNet-B0 dedicated whole-image head",
+  "initialization": "ssl",
+  "evaluation": "nested group-disjoint epoch selection",
+  "folds": 5,
+  "inner_folds": 5,
+  "mean_outer_fold_auc": 0.8199062402195567,
+  "std_outer_fold_auc": 0.018318960998021144,
+  "development_oof": {
+    "roc_auc": 0.8123631753782308,
+    "pr_auc": 0.6947935097446558,
+    "accuracy": 0.7673755186721992,
+    "balanced_accuracy": 0.7540541730319861,
+    "f1": 0.6786098172697957,
+    "threshold": 0.5305193662643433
+  },
+  "exploratory_test": {
+    "roc_auc": 0.8212344720496896,
+    "pr_auc": 0.7288703708582662,
+    "accuracy": 0.762589928057554,
+    "balanced_accuracy": 0.7455599767080745,
+    "f1": 0.6857142857142857,
+    "threshold": 0.5305193662643433
+  },
+  "fold_assignment_csv": "results/stage2_groupfold_assignments.csv",
+  "selection_used_outer_fold": false,
+  "selection_used_test": false,
+  "warning": "The current test set was inspected during earlier development and remains exploratory."
+}

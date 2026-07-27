@@ -1,0 +1,10 @@
+{
+  "namespace_groups_total": 4236,
+  "namespace_groups_by_split": {
+    "train": 3388,
+    "val": 424,
+    "test": 424
+  },
+  "raw_person_ids_shared_across_bacterial_viral": 979,
+  "shared_raw_person_ids_crossing_study_splits": 338
+}

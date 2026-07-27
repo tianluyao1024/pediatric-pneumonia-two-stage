@@ -1,0 +1,81 @@
+{
+  "paired_auc_top3": {
+    "embedding_svm_minus_pneunet_v2": {
+      "difference": 0.006963315217391353,
+      "ci95": [
+        -0.020674051478871844,
+        0.03403370648154149
+      ]
+    },
+    "embedding_svm_minus_oof_stack": {
+      "difference": 0.012203998447204989,
+      "ci95": [
+        -0.015661122612673845,
+        0.0390915400767561
+      ]
+    },
+    "pneunet_v2_minus_oof_stack": {
+      "difference": 0.005240683229813636,
+      "ci95": [
+        -0.026294981075403748,
+        0.038533144135660204
+      ]
+    }
+  },
+  "paired_cascade_minus_single": {
+    "accuracy": {
+      "difference": -0.0017391304347825765,
+      "ci95": [
+        -0.0347233719646799,
+        0.03315881326352532
+      ]
+    },
+    "macro_f1": {
+      "difference": -0.012427082357888697,
+      "ci95": [
+        -0.048031792634437506,
+        0.024429725013357998
+      ]
+    },
+    "normal_recall": {
+      "difference": 0.025316455696202556,
+      "ci95": [
+        -0.006803885937936826,
+        0.0625
+      ]
+    },
+    "bacterial_recall": {
+      "difference": 0.03515625,
+      "ci95": [
+        -0.017621145374449254,
+        0.09328482587064674
+      ]
+    },
+    "viral_recall": {
+      "difference": -0.08695652173913049,
+      "ci95": [
+        -0.16085043988269793,
+        -0.012422360248447225
+      ]
+    }
+  },
+  "cernet_equal_coverage_overlap": {
+    "kept_each": 360,
+    "shared_kept": 311,
+    "shared_rejected": 8,
+    "kept_by_only_one_total": 98,
+    "kept_only_baseline": 49,
+    "kept_only_tuned": 49,
+    "shared_kept_accuracy_baseline": 0.7813504823151125,
+    "shared_kept_accuracy_tuned": 0.7813504823151125
+  },
+  "training_weights": {
+    "pneunet_v2_pos_class": "viral",
+    "pneunet_v2_pos_weight": 1.8767812238055324,
+    "single_stage_class_weights_normal_bacterial_viral": [
+      1.236253617469087,
+      0.6995682596397201,
+      1.3129365744621402
+    ]
+  }
+}

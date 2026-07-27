@@ -1,0 +1,23 @@
+# Dataset and local outputs
+data/raw/
+data/processed/
+models/
+artifacts/
+*.pt
+*.pth
+*.ckpt
+*.onnx
+*.npy
+*.npz
+
+# Python and OS
+__pycache__/
+*.py[cod]
+.venv/
+.idea/
+.vscode/
+Thumbs.db
+
+# Generated manuscript files
+paper/*.docx
+paper/*.pdf

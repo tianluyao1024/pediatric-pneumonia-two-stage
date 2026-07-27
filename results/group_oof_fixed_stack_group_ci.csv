@@ -1,0 +1,2 @@
+model,n_images,n_groups,roc_auc,ci95_low,ci95_high
+group_oof_fixed_stack,417,266,0.8407899844720497,0.784357822653739,0.8930681136762549

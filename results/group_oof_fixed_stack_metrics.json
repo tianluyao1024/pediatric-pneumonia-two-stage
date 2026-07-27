@@ -1,0 +1,14 @@
+{
+  "model": "group_oof_fixed_stack",
+  "n": 417,
+  "folds": 5,
+  "threshold": 0.5094855284967313,
+  "development_oof_auc": 0.8311384879332582,
+  "roc_auc": 0.8407899844720497,
+  "pr_auc": 0.7396861367964594,
+  "accuracy": 0.7745803357314148,
+  "balanced_accuracy": 0.7806798330745341,
+  "viral_sensitivity": 0.8074534161490683,
+  "viral_specificity": 0.75390625,
+  "viral_f1": 0.7344632768361582
+}

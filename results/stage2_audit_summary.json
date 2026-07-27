@@ -1,0 +1,30 @@
+{
+  "n_images": 4273,
+  "n_groups": 2653,
+  "class_counts": {
+    "bacterial": 2780,
+    "viral": 1493
+  },
+  "split_counts": {
+    "train": 3432,
+    "val": 424,
+    "test": 417
+  },
+  "source_counts": {
+    "train": 3875,
+    "test": 390,
+    "val": 8
+  },
+  "missing_files": 0,
+  "unreadable_images": 0,
+  "exact_duplicate_groups": 26,
+  "exact_duplicate_cross_label_groups": 0,
+  "exact_duplicate_cross_split_groups": 0,
+  "near_duplicate_candidates": 36,
+  "near_duplicate_cross_label_candidates": 1,
+  "near_duplicate_cross_split_candidates": 4,
+  "filename_group_label_conflicts": 0,
+  "filename_group_split_leakage": 0,
+  "high_confidence_discordance": 17,
+  "warning": "模型不一致仅用于人工复核，禁止自动改标签或删除。"
+}

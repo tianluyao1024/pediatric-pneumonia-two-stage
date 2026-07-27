@@ -1,0 +1,39 @@
+{
+  "n": 575,
+  "n_groups": 424,
+  "accuracy": 0.8,
+  "accuracy_ci_low": 0.7423633063709377,
+  "accuracy_ci_high": 0.8509559718278698,
+  "macro_f1": 0.7907063630764196,
+  "macro_f1_ci_low": 0.739077588584687,
+  "macro_f1_ci_high": 0.8380639158676865,
+  "normal_recall": 0.9746835443037974,
+  "normal_recall_ci_low": 0.9482702642185401,
+  "normal_recall_ci_high": 0.9941193570451436,
+  "bacterial_recall": 0.83203125,
+  "bacterial_recall_ci_low": 0.7689075630252101,
+  "bacterial_recall_ci_high": 0.886492321279623,
+  "viral_recall": 0.577639751552795,
+  "viral_recall_ci_low": 0.45143363917635765,
+  "viral_recall_ci_high": 0.7096941045606229,
+  "confusion_matrix": [
+    [
+      154,
+      2,
+      2
+    ],
+    [
+      7,
+      213,
+      36
+    ],
+    [
+      15,
+      53,
+      93
+    ]
+  ],
+  "stage1_errors": 26,
+  "stage2_subtype_exchanges": 89,
+  "total_errors": 115
+}

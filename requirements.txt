@@ -1,0 +1,16 @@
+torch==2.7.1
+torchvision==0.22.1
+numpy==2.2.6
+pandas==2.3.1
+scikit-learn==1.7.1
+scikit-image==0.25.2
+matplotlib==3.10.3
+seaborn==0.13.2
+pillow==11.3.0
+pyarrow==20.0.0
+tqdm==4.67.1
+joblib==1.5.1
+scipy==1.16.0
+statsmodels==0.14.5
+python-docx==1.2.0
+openpyxl==3.1.5
