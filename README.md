@@ -16,7 +16,7 @@ The code implements the following analyses reported in the paper:
 
 - filename-group-disjoint train/validation/test partition construction;
 - conventional and deep Stage-1 baselines, including PneuNet;
-- Stage-2 PneuNet-v2 and grouped bootstrap evaluation;
+- Stage-2 PneuNet-v2 training, grouped bootstrap evaluation and fixed-transform stacking;
 - fold-specific paediatric SimSiam representation learning, ImageNet-initialised training and fixed-weight OOF fusion;
 - fixed-transform GroupKFold stacking (the previous within-cohort rank stack is not used);
 - complete end-to-end cascade and single-stage three-class comparison;
@@ -65,22 +65,26 @@ $env:PNEUMONIA_PROJECT_ROOT = $root
 # 1. Stage 1: normal versus pneumonia and fixed split outputs
 & $python -m src.stage1_compare_select_stable_v3 --project-root $root
 
-# 2. Stage 2 next-generation whole-image models (optional additional baselines)
+# 2. Stage 2 PneuNet-v2 and related whole-image baselines
+& $python -m src.train_stage2_optimized --project-root $root --name pneunet_v2 --size 320 --epochs 14
+& $python -m src.export_stage2_val_predictions --project-root $root
+
+# 3. Optional next-generation whole-image models
 & $python -m src.stage2_train_nextgen --project-root $root --model all --device cuda --resume
 
-# 3. Audit available Stage-2 prediction files and calculate grouped statistics
+# 4. Audit available Stage-2 prediction files and calculate grouped statistics
 & $python -m src.stage2_compare_select_nextgen --project-root $root
 
-# 4. Fold-specific paediatric SimSiam pretraining and OOF predictions
+# 5. Fold-specific paediatric SimSiam pretraining and OOF predictions
 & $python -m src.stage2_ssl_pretrain_groupfold --project-root $root
 
-# 5. Fixed-transform GroupKFold stack and OOF fusion summaries
+# 6. Fixed-transform GroupKFold stack and OOF fusion summaries
 & $python -m src.stage2_oof_fixed_stack --project-root $root
 
-# 6. Route all images through the Stage-1 -> Stage-2 cascade
+# 7. Route all images through the Stage-1 -> Stage-2 cascade
 & $python -m src.evaluate_end_to_end_cascade --project-root $root
 
-# 7. Regenerate the paper figures
+# 8. Regenerate the paper figures
 & $python -m src.plot_end_to_end_cascade
 & $python -m src.redraw_reference_style_architecture
 ```
@@ -91,7 +95,7 @@ Or use the provided helper for the core five training/evaluation stages:
 .\scripts\run_selected_experiments.ps1 -Python "C:\\Path\\To\\python.exe" -ProjectRoot $PWD
 ```
 
-Training writes local checkpoints, intermediate arrays and large images below `models/`, `artifacts/` and `data/processed/`; these directories are intentionally ignored by Git. The complete run needs a CUDA-capable GPU, substantial disk space and several hours or longer depending on the hardware.
+Training writes local checkpoints, intermediate arrays and large images below `models/`, `artifacts/` and `data/processed/`; these directories are intentionally ignored by Git. The complete run needs a CUDA-capable GPU, substantial disk space and several hours or longer depending on the hardware. The committed `results/` files are the canonical route for reproducing the reported tables without retraining.
 
 ## Exact reported results
 

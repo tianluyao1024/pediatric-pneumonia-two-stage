@@ -6,6 +6,7 @@ predictions only.
 """
 from pathlib import Path
 import json
+import os
 import sys
 
 import joblib
@@ -14,7 +15,7 @@ import pandas as pd
 from sklearn.linear_model import LogisticRegression
 from sklearn.metrics import roc_auc_score
 
-ROOT = Path(r"D:\pneumonia_two_stage_study")
+ROOT = Path(os.environ.get("PNEUMONIA_PROJECT_ROOT", Path(__file__).resolve().parents[1]))
 sys.path.insert(0, str(ROOT))
 from src.pipeline import metrics, optimal_threshold
 NAMES = ["resnet18", "efficientnet_b0", "pneunet", "pneunet_no_attention",

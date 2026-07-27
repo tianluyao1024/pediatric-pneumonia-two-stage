@@ -1,6 +1,6 @@
 """Single-stage three-class PneuNet baseline on the fixed filename-group split."""
 from pathlib import Path
-import json, sys
+import json, os, sys
 
 import numpy as np
 import pandas as pd
@@ -11,7 +11,7 @@ from torch.utils.data import DataLoader, Dataset
 from torchvision import models, transforms
 from torchvision.io import read_image
 
-ROOT = Path(r"D:\pneumonia_two_stage_study")
+ROOT = Path(os.environ.get("PNEUMONIA_PROJECT_ROOT", Path(__file__).resolve().parents[1]))
 sys.path.insert(0, str(ROOT))
 from src.pipeline import CBAM, GeM, seed_all
 

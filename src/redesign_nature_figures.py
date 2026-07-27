@@ -1,4 +1,5 @@
 from pathlib import Path
+import os
 import json
 import numpy as np
 import pandas as pd
@@ -6,7 +7,7 @@ import matplotlib as mpl
 import matplotlib.pyplot as plt
 from matplotlib.patches import FancyBboxPatch, Polygon, Circle
 
-ROOT=Path(r"D:\pneumonia_two_stage_study")
+ROOT=Path(os.environ.get("PNEUMONIA_PROJECT_ROOT", Path(__file__).resolve().parents[1]))
 OUT=ROOT/"reports"/"figures"/"nature_redesign"; OUT.mkdir(parents=True,exist_ok=True)
 mpl.rcParams.update({"font.family":"sans-serif","font.sans-serif":["Arial","Microsoft YaHei","DejaVu Sans"],
  "svg.fonttype":"none","pdf.fonttype":42,"font.size":7,"axes.linewidth":.7,"axes.spines.top":False,
