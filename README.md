@@ -91,7 +91,7 @@ $env:PNEUMONIA_PROJECT_ROOT = $root
 
 # 9. Regenerate the paper figures
 & $python -m src.plot_end_to_end_cascade
-& $python -m src.plot_main_result_forest_plots
+& $python -m src.plot_final_manuscript_figures
 & $python -m src.redraw_reference_style_architecture
 ```
 
