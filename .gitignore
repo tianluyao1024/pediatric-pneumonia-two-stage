@@ -22,3 +22,7 @@ Thumbs.db
 # Generated manuscript files
 paper/*.docx
 paper/*.pdf
+
+# High-resolution TIFF exports are reproducible from the committed plot sources
+# and public result tables; SVG/PDF/PNG publication assets are versioned.
+figures/*.tiff

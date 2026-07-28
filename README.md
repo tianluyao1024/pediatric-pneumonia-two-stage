@@ -91,6 +91,7 @@ $env:PNEUMONIA_PROJECT_ROOT = $root
 
 # 9. Regenerate the paper figures
 & $python -m src.plot_end_to_end_cascade
+& $python -m src.plot_main_result_forest_plots
 & $python -m src.redraw_reference_style_architecture
 ```
 
@@ -117,8 +118,10 @@ All reported uncertainty is a percentile 95% bootstrap interval calculated by re
 | `results/end_to_end_cascade_metrics.json` | End-to-end cascade accuracy, macro-F1, and all class-recall intervals. |
 | `results/single_stage_pneunet_3class_metrics.json` | Matched single-stage three-class comparator accuracy, macro-F1, and all class-recall intervals. |
 | `results/stage1_all_models_locked_test_ci.csv`, `results/stage2_all_models_locked_test_ci.csv` | Model-level fixed-exploratory-test bootstrap results, including all recorded metrics. |
+| `results/complete_numeric_tables/` | Manuscript-order CSV exports for Stage 1, Stage 2, whole-image OOF, end-to-end cascade, single-stage comparator, source-directory audit, and paired AUC differences. Each table has a short README. |
 
 The compact manuscript notation `estimate (+upper/-lower)` expresses the same asymmetric interval as the CSV/JSON lower and upper bounds. The complete plotting script for the cascade comparison is `src/plot_end_to_end_cascade.py`; it consumes the two end-to-end JSON files and draws the reported error bars.
+`src/plot_main_result_forest_plots.py` regenerates the Stage-1/Stage-2 comparison and OOF/source-audit forest plots from the sanitised result tables, exporting editable SVG/PDF plus PNG/TIFF files.
 
 The post hoc Stage-2 ensemble is a **fixed 50:50 probability average** of ImageNet-initialised and fold-specific paediatric-SimSiam EfficientNet-B0 models. It uses no test-set information and no weight search, but it was assembled after component OOF predictions existed; its pooled OOF results are exploratory development evidence rather than a preregistered primary endpoint.
 
