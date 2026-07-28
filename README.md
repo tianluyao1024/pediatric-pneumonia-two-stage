@@ -106,6 +106,20 @@ Training writes local checkpoints, intermediate arrays and large images below `m
 
 For the paper tables without retraining, use the committed sanitised files under `results/`. They contain fixed-split predictions, group identifiers, bootstrap summaries and source-directory analyses with local absolute paths removed. Re-run the corresponding analysis scripts after training if you want regenerated outputs.
 
+### Complete 95% confidence intervals
+
+All reported uncertainty is a percentile 95% bootstrap interval calculated by resampling the subtype-namespaced filename group (2,000 resamples). The fixed test set remains exploratory; these intervals quantify sampling variability under this grouping rule and do not turn it into a confirmatory evaluation.
+
+| File | Contents |
+|---|---|
+| `results/main_tables_complete_group_ci.csv` | Complete Stage-1 and conditional Stage-2 table metrics: ROC-AUC, PR-AUC, accuracy, balanced accuracy, sensitivity, specificity, and F1, each with lower/upper bounds. |
+| `results/stage2_whole_nested_oof_group_ci.csv` | ImageNet, paediatric SimSiam, and fixed 50:50 whole-image development OOF ROC-AUC and PR-AUC intervals. |
+| `results/end_to_end_cascade_metrics.json` | End-to-end cascade accuracy, macro-F1, and all class-recall intervals. |
+| `results/single_stage_pneunet_3class_metrics.json` | Matched single-stage three-class comparator accuracy, macro-F1, and all class-recall intervals. |
+| `results/stage1_all_models_locked_test_ci.csv`, `results/stage2_all_models_locked_test_ci.csv` | Model-level fixed-exploratory-test bootstrap results, including all recorded metrics. |
+
+The compact manuscript notation `estimate (+upper/-lower)` expresses the same asymmetric interval as the CSV/JSON lower and upper bounds. The complete plotting script for the cascade comparison is `src/plot_end_to_end_cascade.py`; it consumes the two end-to-end JSON files and draws the reported error bars.
+
 The post hoc Stage-2 ensemble is a **fixed 50:50 probability average** of ImageNet-initialised and fold-specific paediatric-SimSiam EfficientNet-B0 models. It uses no test-set information and no weight search, but it was assembled after component OOF predictions existed; its pooled OOF results are exploratory development evidence rather than a preregistered primary endpoint.
 
 ## Repository map
