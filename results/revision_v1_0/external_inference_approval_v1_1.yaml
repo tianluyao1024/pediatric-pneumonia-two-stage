@@ -1,0 +1,20 @@
+status: APPROVED_FOR_ONE_TIME_EXTERNAL_STAGE1_INFERENCE
+mapping_version: v1.1
+checkpoint_sha256: 1b54cedec02923e8a21cbcc6956c882446be23c58c4b14c2090f2f3aa0e7ca24
+preprocessing_sha256: 1cc0efe925ff2094c95025858862002076256cbe7d17f12dad666a5e727097fd
+threshold: 0.8201918601989746
+threshold_source: prespecified internal group-disjoint validation
+threshold_relation_to_oof: distinct from fold-specific development-OOF thresholds
+inference_code_sha256: 1fe11e171c8331943f34d066819693e8bdc2fba832ae0c8f45216546cbb3d2b8
+approved_by:
+  - Luyao Tian
+  - Yuannong Ye
+approved_at: 2026-08-02
+inference_runs_allowed: 1
+scope:
+  - VinDr-PCXR v1.0.0 approved 339-image subset only
+  - Stage 1 external dataset-label feasibility evaluation only
+prohibitions:
+  - no parameter, threshold, preprocessing, or inclusion-rule modification after inference
+  - no Stage 2 inference
+  - no patient-level, microbiological, pathology, or clinical-diagnosis claim
