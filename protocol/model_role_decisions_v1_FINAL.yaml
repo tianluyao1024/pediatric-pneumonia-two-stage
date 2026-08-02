@@ -1,0 +1,22 @@
+{
+  "status": "FINAL_PENDING_TWO_AUTHOR_APPROVAL",
+  "model_roles": {
+    "primary_cascade": {
+      "stage1": "pneunet",
+      "stage2": "pneunet_v2"
+    },
+    "primary_comparator": "pneunet3_matched_single_stage",
+    "exploratory_development": [
+      "imagenet_efficientnet_b0",
+      "pediatric_simsiam_efficientnet_b0",
+      "fixed_50_50_imagenet_ssl_fusion"
+    ],
+    "supplementary_only": [
+      "historical_stage1_deep_ensemble",
+      "historical_stage2_equal_weight_ensemble",
+      "fixed_transform_stack",
+      "embedding_svm",
+      "cernet"
+    ]
+  }
+}

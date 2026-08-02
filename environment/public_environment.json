@@ -1,0 +1,16 @@
+{
+  "python": "3.11.6",
+  "torch": "2.8.0+cu128",
+  "torchvision": "0.23.0+cu128",
+  "cuda_runtime": "12.8",
+  "cuda_available": true,
+  "gpu": "NVIDIA GeForce RTX 5080 Laptop GPU",
+  "cudnn": 91002,
+  "numpy": "2.4.4",
+  "pandas": "3.0.3",
+  "scikit_learn": "1.7.2",
+  "pillow": "11.3.0",
+  "timestamp_utc_updated": "2026-07-31T02:33:43.133788+00:00",
+  "manifest_sha256": "81729562d603e576745f36ca703df8fd5343049ea07d24ff5c4a86bf28f8c263",
+  "note": "Local executable and filesystem paths were intentionally removed."
+}

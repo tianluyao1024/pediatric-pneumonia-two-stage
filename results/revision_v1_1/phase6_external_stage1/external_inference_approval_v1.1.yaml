@@ -1,0 +1,27 @@
+status: APPROVED_FOR_ONE_TIME_EXTERNAL_STAGE1_INFERENCE
+mapping_version: v1.1
+protocol_amendment: protocol/protocol_amendment_v1.3.md
+checkpoint_path: artifacts/revision_credible_audit_v1/phase6_external_stage1_audit/final_stage1_model/final_stage1_complete_development.pt
+checkpoint_sha256: 1b54cedec02923e8a21cbcc6956c882446be23c58c4b14c2090f2f3aa0e7ca24
+preprocessing_config: protocol/stage1_config_v1_FINAL.yaml
+preprocessing_sha256: 1cc0efe925ff2094c95025858862002076256cbe7d17f12dad666a5e727097fd
+threshold: 0.8201918601989746
+inference_code_sha256: 1fe11e171c8331943f34d066819693e8bdc2fba832ae0c8f45216546cbb3d2b8
+code_commit: unavailable_no_git_head; source_hash_used_for_freeze
+environment: artifacts/revision_credible_audit_v1/phase0/environment.json
+environment_sha256: 03852a079eaaf77e4b440664faf09dd9b1334703dde00ac268ad2fe6c477eba7
+external_audit_artifacts:
+  source_level_pa_amendment_status_sha256: 236a5521d8255776152ed7035fc8bb030901ae7598f4a41153406c0c752f4332
+  approved_339_manifest_sha256: 57c868a1e433f7f5f51634dd23d9f89989ba4710831bf8616f3a082bf4e9d327
+approved_by:
+  - Luyao Tian
+  - Yuannong Ye
+approved_at: 2026-08-02
+inference_runs_allowed: 1
+scope:
+  - VinDr-PCXR v1.0.0 approved 339-image subset only
+  - Stage 1 external dataset-label feasibility evaluation only
+prohibitions:
+  - no parameter, threshold, preprocessing, or inclusion-rule modification after inference
+  - no Stage 2 inference
+  - no patient-level, microbiological, pathology, or clinical-diagnosis claim

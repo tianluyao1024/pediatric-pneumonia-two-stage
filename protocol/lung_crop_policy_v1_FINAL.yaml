@@ -1,0 +1,42 @@
+status: FROZEN_POST_RESULT_TECHNICAL_SENSITIVITY
+segmenter:
+  package: torchxrayvision
+  package_version: 1.5.2
+  model: chestx_det.PSPNet
+  weights_sha256: 019b167eac6b729fc1bb92bbbc185fc1730aaa65819f4e3fe718186cadc044fc
+  input_size: 512
+  input_geometry: official_center_square_crop
+  targets: [Left Lung, Right Lung]
+  activation: sigmoid
+  mask_threshold: 0.5
+mask_processing:
+  connected_component: largest_per_lung
+  minimum_area_ratio_per_lung: 0.005
+  combined_area_ratio_range: [0.02, 0.60]
+  minimum_bbox_width_ratio: 0.25
+  minimum_bbox_height_ratio: 0.25
+crop_margin_fraction:
+  left: 0.12
+  right: 0.12
+  superior: 0.15
+  inferior: 0.10
+failure_policy:
+  fallback: deterministic_center_square_crop
+  exclude_image: false
+display:
+  rescale_slope_intercept: true
+  monochrome1_inversion: true
+  percentile_range: [0.5, 99.5]
+classifier_input:
+  size: 224
+  preserve_aspect_ratio: true
+  letterbox_value_8bit: 0
+  grayscale_to_channels: 3
+  normalization: imagenet
+prohibitions:
+  - no label-dependent crop
+  - no prediction-dependent crop
+  - no manual crop
+  - no parameter selection from external classification results
+  - no fixed exploratory test access
+

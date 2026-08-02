@@ -1,0 +1,55 @@
+{
+  "status": "TRAINING_AUTHORIZED_AFTER_FLOP_PREFLIGHT_AND_TWO_AUTHOR_APPROVAL",
+  "role": "primary_cascade_stage2",
+  "model_name": "pneunet_v2",
+  "task": "bacterial_vs_viral_dataset_label",
+  "positive_class": "viral",
+  "architecture": {
+    "backbone": "convnext_tiny",
+    "initialization": "imagenet",
+    "feature_channels": 768,
+    "pooling": "learnable_gem",
+    "normalization_head": "layernorm",
+    "dropout": 0.35,
+    "output": "one_logit"
+  },
+  "input": {
+    "size": 320,
+    "resize_policy": "letterbox",
+    "channels": 3,
+    "normalization": "imagenet"
+  },
+  "training": {
+    "loss": "bce_with_logits",
+    "pos_weight": {
+      "rule": "outer_training_bacterial_count_divided_by_viral_count",
+      "fixed_historical_value_prohibited": true
+    },
+    "optimizer": "adamw",
+    "frozen_backbone_epochs": 2,
+    "backbone_learning_rate": 1e-05,
+    "head_learning_rate": 0.0001,
+    "weight_decay": 0.0001,
+    "scheduler": "none",
+    "batch_size": 4,
+    "max_epochs": 14,
+    "checkpoint_metric": "inner_validation_roc_auc",
+    "early_stopping": {
+      "patience": 4,
+      "active_after_epoch": 5
+    },
+    "gradient_clip_norm": 5.0
+  },
+  "threshold": {
+    "source": "inner_group_disjoint_validation",
+    "criterion": "f1_viral",
+    "tie_break": "closest_to_0.5"
+  },
+  "augmentation": {
+    "horizontal_flip": false
+  },
+  "inference": {
+    "flip_tta": false,
+    "other_tta": false
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "status": "COMPLETE",
+  "analysis": "conservative_raw_identifier",
+  "n_oof_images": 5281,
+  "bootstrap_replicates": 5000,
+  "fixed_exploratory_test_access": false
+}

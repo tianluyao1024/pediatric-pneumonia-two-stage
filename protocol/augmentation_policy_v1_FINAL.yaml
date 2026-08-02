@@ -1,0 +1,88 @@
+{
+  "status": "FINAL_PENDING_TWO_AUTHOR_APPROVAL",
+  "policy": "nonreflection_augmentation_v1",
+  "global_prohibitions": {
+    "horizontal_flip": false,
+    "vertical_flip": false,
+    "random_erasing": false,
+    "flip_tta": false
+  },
+  "stage1_pneunet": {
+    "source": "src/pipeline.py:98-107",
+    "grayscale_to_three_channels": true,
+    "resize": {
+      "mode": "fixed",
+      "size": [
+        224,
+        224
+      ],
+      "antialias": true
+    },
+    "random_rotation_degrees": 7,
+    "random_affine": {
+      "degrees": 0,
+      "translate": [
+        0.04,
+        0.04
+      ],
+      "scale": [
+        0.95,
+        1.05
+      ]
+    },
+    "brightness": "none",
+    "contrast": "none"
+  },
+  "stage2_pneunet_v2": {
+    "source": "src/train_stage2_optimized.py:19-48",
+    "grayscale_to_three_channels": true,
+    "resize": {
+      "mode": "letterbox",
+      "size": [
+        320,
+        320
+      ],
+      "fill": 0
+    },
+    "random_rotation_degrees": 5,
+    "random_affine": {
+      "degrees": 0,
+      "translate": [
+        0.025,
+        0.025
+      ],
+      "scale": [
+        0.97,
+        1.03
+      ]
+    },
+    "brightness": "none",
+    "contrast": "none"
+  },
+  "single_stage_pneunet3": {
+    "source": "src/train_single_stage_pneunet_3class.py:19-30",
+    "grayscale_to_three_channels": true,
+    "resize": {
+      "mode": "fixed",
+      "size": [
+        224,
+        224
+      ],
+      "antialias": true
+    },
+    "random_rotation_degrees": 5,
+    "random_affine": {
+      "degrees": 0,
+      "translate": [
+        0.025,
+        0.025
+      ],
+      "scale": [
+        0.97,
+        1.03
+      ]
+    },
+    "brightness": "none",
+    "contrast": "none"
+  }
+}

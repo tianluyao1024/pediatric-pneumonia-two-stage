@@ -1,0 +1,5 @@
+analysis,error_pathway,count,proportion
+conservative_raw_identifier,correct,4315,0.8170800984661996
+conservative_raw_identifier,stage1_false_positive,93,0.017610301079341036
+conservative_raw_identifier,stage1_false_negative,81,0.015338004165877675
+conservative_raw_identifier,stage2_subtype_error,792,0.1499715962885817

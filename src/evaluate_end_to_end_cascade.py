@@ -17,11 +17,11 @@ Final classes:
     2 = viral pneumonia
 
 Recommended path:
-    D:\pneumonia_two_stage_study\src\evaluate_end_to_end_cascade.py
+    <repository>\src\evaluate_end_to_end_cascade.py
 
 Run:
     python -m src.evaluate_end_to_end_cascade ^
-        --project-root "D:\pneumonia_two_stage_study" ^
+        --project-root "<repository>" ^
         --device cuda ^
         --batch-size 8 ^
         --reps 2000
