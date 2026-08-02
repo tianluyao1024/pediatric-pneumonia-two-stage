@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+  "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns:xlink="http://www.w3.org/1999/xlink" width="479.575256pt" height="150.228pt" viewBox="0 0 479.575256 150.228" xmlns="http://www.w3.org/2000/svg" version="1.1">
+ <metadata>
+  <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+   <cc:Work>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:date>2026-08-02T21:18:49.599874</dc:date>
+    <dc:format>image/svg+xml</dc:format>
+    <dc:creator>
+     <cc:Agent>
+      <dc:title>Matplotlib v3.10.9, https://matplotlib.org/</dc:title>
+     </cc:Agent>
+    </dc:creator>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <defs>
+  <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
+ </defs>
+ <g id="figure_1">
+  <g id="patch_1">
+   <path d="M 0 150.228 
+L 479.575256 150.228 
+L 479.575256 0 
+L 0 0 
+z
+" style="fill: #ffffff"/>
+  </g>
+  <g id="axes_1">
+   <g id="patch_2">
+    <path d="M 19.48158 110.700936 
+L 78.11622 110.700936 
+Q 85.24746 110.700936 85.24746 108.256032 
+L 85.24746 39.255408 
+Q 85.24746 36.810504 78.11622 36.810504 
+L 19.48158 36.810504 
+Q 12.35034 36.810504 12.35034 39.255408 
+L 12.35034 108.256032 
+Q 12.35034 110.700936 19.48158 110.700936 
+z
+" clip-path="url(#pf3e16f0215)" style="fill: #edf4fb; stroke: #202020; stroke-width: 0.8; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_3">
+    <path d="M 102.67938 110.700936 
+L 173.19942 110.700936 
+Q 180.33066 110.700936 180.33066 108.256032 
+L 180.33066 39.255408 
+Q 180.33066 36.810504 173.19942 36.810504 
+L 102.67938 36.810504 
+Q 95.54814 36.810504 95.54814 39.255408 
+L 95.54814 108.256032 
+Q 95.54814 110.700936 102.67938 110.700936 
+z
+" clip-path="url(#pf3e16f0215)" style="fill: #eef7ee; stroke: #202020; stroke-width: 0.8; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_4">
+    <path d="M 197.76258 110.700936 
+L 264.32082 110.700936 
+Q 271.45206 110.700936 271.45206 108.256032 
+L 271.45206 39.255408 
+Q 271.45206 36.810504 264.32082 36.810504 
+L 197.76258 36.810504 
+Q 190.63134 36.810504 190.63134 39.255408 
+L 190.63134 108.256032 
+Q 190.63134 110.700936 197.76258 110.700936 
+z
+" clip-path="url(#pf3e16f0215)" style="fill: #f8f1e8; stroke: #202020; stroke-width: 0.8; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_5">
+    <path d="M 284.92218 74.027376 
+L 381.19392 74.027376 
+Q 388.32516 74.027376 388.32516 71.582472 
+L 388.32516 39.255408 
+Q 388.32516 36.810504 381.19392 36.810504 
+L 284.92218 36.810504 
+Q 277.79094 36.810504 277.79094 39.255408 
+L 277.79094 71.582472 
+Q 277.79094 74.027376 284.92218 74.027376 
+z
+" clip-path="url(#pf3e16f0215)" style="fill: #f9edef; stroke: #202020; stroke-width: 0.8; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_6">
+    <path d="M 284.92218 110.700936 
+L 381.19392 110.700936 
+Q 388.32516 110.700936 388.32516 108.256032 
+L 388.32516 85.436928 
+Q 388.32516 82.992024 381.19392 82.992024 
+L 284.92218 82.992024 
+Q 277.79094 82.992024 277.79094 85.436928 
+L 277.79094 108.256032 
+Q 277.79094 110.700936 284.92218 110.700936 
+z
+" clip-path="url(#pf3e16f0215)" style="fill: #eef1f8; stroke: #202020; stroke-width: 0.8; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_7">
+    <path d="M 82.490643 73.75572 
+Q 90.398479 73.75572 97.188282 73.75572 
+" clip-path="url(#pf3e16f0215)" style="fill: none; stroke: #202020; stroke-linecap: round"/>
+    <path d="M 92.388282 71.35572 
+L 97.188282 73.75572 
+L 92.388282 76.15572 
+z
+" clip-path="url(#pf3e16f0215)" style="fill: #202020; stroke: #202020; stroke-linecap: round"/>
+   </g>
+   <g id="patch_8">
+    <path d="M 177.573843 73.75572 
+Q 185.481679 73.75572 192.271482 73.75572 
+" clip-path="url(#pf3e16f0215)" style="fill: none; stroke: #202020; stroke-linecap: round"/>
+    <path d="M 187.471482 71.35572 
+L 192.271482 73.75572 
+L 187.471482 76.15572 
+z
+" clip-path="url(#pf3e16f0215)" style="fill: #202020; stroke: #202020; stroke-linecap: round"/>
+   </g>
+   <g id="patch_9">
+    <path d="M 268.473746 63.334502 
+Q 274.621375 60.172984 279.774742 57.522782 
+" clip-path="url(#pf3e16f0215)" style="fill: none; stroke: #202020; stroke-linecap: round"/>
+    <path d="M 274.408524 57.583679 
+L 279.774742 57.522782 
+L 276.603729 61.852294 
+z
+" clip-path="url(#pf3e16f0215)" style="fill: #202020; stroke: #202020; stroke-linecap: round"/>
+   </g>
+   <g id="patch_10">
+    <path d="M 268.280299 85.842621 
+Q 274.620404 90.733374 280.075257 94.941245 
+" clip-path="url(#pf3e16f0215)" style="fill: none; stroke: #202020; stroke-linecap: round"/>
+    <path d="M 277.740542 90.109153 
+L 280.075257 94.941245 
+L 274.808755 93.909762 
+z
+" clip-path="url(#pf3e16f0215)" style="fill: #202020; stroke: #202020; stroke-linecap: round"/>
+   </g>
+   <g id="patch_11">
+    <path d="M 332.85996 74.400041 
+Q 332.85996 78.510271 332.85996 81.502466 
+" clip-path="url(#pf3e16f0215)" style="fill: none; stroke: #202020; stroke-linecap: round"/>
+    <path d="M 335.25996 76.702466 
+L 332.85996 81.502466 
+L 330.45996 76.702466 
+z
+" clip-path="url(#pf3e16f0215)" style="fill: #202020; stroke: #202020; stroke-linecap: round"/>
+   </g>
+   <g id="text_1">
+    <text style="font-size: 7.4px; font-family: 'Arial', 'DejaVu Sans', 'Liberation Sans', sans-serif" transform="translate(25.555963 66.945783)">Audited public</text>
+    <text style="font-size: 7.4px; font-family: 'Arial', 'DejaVu Sans', 'Liberation Sans', sans-serif" transform="translate(19.389103 75.567188)">chest radiographs</text>
+    <text style="font-size: 7.4px; font-family: 'Arial', 'DejaVu Sans', 'Liberation Sans', sans-serif" transform="translate(26.586181 84.304969)">5,856 images</text>
+   </g>
+   <g id="text_2">
+    <text style="font-size: 7.4px; font-family: 'Arial', 'DejaVu Sans', 'Liberation Sans', sans-serif" transform="translate(104.829603 66.989143)">Development cohort</text>
+    <text style="font-size: 7.4px; font-family: 'Arial', 'DejaVu Sans', 'Liberation Sans', sans-serif" transform="translate(115.726681 75.640205)">5,281 images</text>
+    <text style="font-size: 7.4px; font-family: 'Arial', 'DejaVu Sans', 'Liberation Sans', sans-serif" transform="translate(106.267978 84.348329)">5 frozen outer folds</text>
+   </g>
+   <g id="text_3">
+    <text style="font-size: 7.4px; font-family: 'Arial', 'DejaVu Sans', 'Liberation Sans', sans-serif" transform="translate(209.244075 67.051378)">Stage 1 OOF</text>
+    <text style="font-size: 7.4px; font-family: 'Arial', 'DejaVu Sans', 'Liberation Sans', sans-serif" transform="translate(195.670278 75.759501)">normal vs pneumonia</text>
+    <text style="font-size: 7.4px; font-family: 'Arial', 'DejaVu Sans', 'Liberation Sans', sans-serif" transform="translate(206.430341 84.380906)">EfficientNet-B0</text>
+   </g>
+   <g id="text_4">
+    <text style="font-size: 7.4px; font-family: 'Arial', 'DejaVu Sans', 'Liberation Sans', sans-serif" transform="translate(290.69305 48.498957)">Route positive predictions</text>
+    <text style="font-size: 7.4px; font-family: 'Arial', 'DejaVu Sans', 'Liberation Sans', sans-serif" transform="translate(307.147066 57.248359)">to Stage 2 OOF</text>
+    <text style="font-size: 7.4px; font-family: 'Arial', 'DejaVu Sans', 'Liberation Sans', sans-serif" transform="translate(308.112534 66.078235)">ConvNeXt-Tiny</text>
+   </g>
+   <g id="text_5">
+    <text style="font-size: 7.4px; font-family: 'Arial', 'DejaVu Sans', 'Liberation Sans', sans-serif" transform="translate(289.880206 94.405434)">Three-class cascade OOF</text>
+    <text style="font-size: 7.4px; font-family: 'Arial', 'DejaVu Sans', 'Liberation Sans', sans-serif" transform="translate(293.1628 103.026839)">vs matched single-stage</text>
+   </g>
+   <g id="text_6">
+    <text style="font-size: 7.3px; font-family: 'Arial', 'DejaVu Sans', 'Liberation Sans', sans-serif; text-anchor: start; fill: #202020" x="17.1045" y="132.16176" transform="rotate(-0 17.1045 132.16176)">Primary comparison: identical filename-group bootstrap draws (5,000 replicates).</text>
+   </g>
+   <g id="text_7">
+    <text style="font-size: 7px; font-family: 'Arial', 'DejaVu Sans', 'Liberation Sans', sans-serif; fill: #202020" transform="translate(282.5451 124.568291)">Sensitivity: conservative raw-identifier-linked grouping.</text>
+    <text style="font-size: 7px; font-family: 'Arial', 'DejaVu Sans', 'Liberation Sans', sans-serif; fill: #202020" transform="translate(282.5451 132.16176)">No fixed exploratory test-set access in primary OOF analysis.</text>
+   </g>
+  </g>
+ </g>
+ <defs>
+  <clipPath id="pf3e16f0215">
+   <rect x="7.2" y="7.2" width="396.18" height="135.828"/>
+  </clipPath>
+ </defs>
+</svg>

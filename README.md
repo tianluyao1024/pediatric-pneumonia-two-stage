@@ -10,6 +10,22 @@ The package includes the training/evaluation code, fixed filename-derived group 
 
 > **Research-use warning.** Dataset labels are dataset-provided subtype labels, not microbiological diagnoses. This repository is not a medical device and must not be used for diagnosis or clinical decision-making.
 
+## Final revision package (v1.0.0)
+
+The final revision is titled **“Leakage-Aware Evaluation and Source-Directory Audit of a Two-Stage Pediatric Pneumonia Classification Framework.”** Its primary evidence is the five-fold outer OOF analysis of all 5,281 development images, not the previously inspected fixed exploratory test directory.
+
+The release adds:
+
+- routing-aware Stage-1 → Stage-2 cascade OOF predictions and a FLOP-matched single-stage comparator;
+- principal filename-group and conservative raw-identifier-linked sensitivity analyses;
+- 5,000-draw paired filename-group bootstrap confidence intervals and error-path decomposition;
+- development-only source-directory technical classifiers and a 200-permutation negative control;
+- aggregate results for the prespecified 339-image VinDr-PCXR Stage-1 feasibility analysis;
+- post-result lung-field and intensity technical sensitivities, kept separate from the frozen external result;
+- five editable submission SVGs plus the CSV source data used to draw them.
+
+The main OOF comparison did **not** support a cascade advantage: macro-F1 was 0.797 (95% CI 0.784–0.811) for the cascade and 0.825 (0.813–0.836) for the matched single-stage model; the paired difference was −0.028 (−0.040 to −0.015). Frozen VinDr-PCXR Stage-1 inference yielded AUROC 0.642 (0.583–0.701). This external result is a restricted dataset-label feasibility analysis, not clinical validation.
+
 ## What is reproducible
 
 The code implements the following analyses reported in the paper:
@@ -109,7 +125,7 @@ For the paper tables without retraining, use the committed sanitised files under
 
 ### Complete 95% confidence intervals
 
-All reported uncertainty is a percentile 95% bootstrap interval calculated by resampling the subtype-namespaced filename group (2,000 resamples). The fixed test set remains exploratory; these intervals quantify sampling variability under this grouping rule and do not turn it into a confirmatory evaluation.
+Primary revision results use percentile 95% intervals from 5,000 filename-group bootstrap draws, with identical resampled groups for paired model comparisons. Legacy fixed-exploratory-test tables use their documented 2,000-draw procedure. The fixed test set remains exploratory; uncertainty intervals do not turn it into a confirmatory evaluation.
 
 | File | Contents |
 |---|---|
@@ -133,6 +149,13 @@ scripts/   Portable PowerShell runner and result-sanitisation utility
 results/   Sanitised metrics, split assignments and prediction tables
 figures/   Submission-quality figures generated from experiment outputs
 config.yaml  Default training and bootstrap settings
+```
+
+Final revision materials are organized as:
+
+```text
+figures/final_submission/     Five editable SVG/PDF figures
+results/revision_v1_0/        Aggregate final-revision metrics and figure source data
 ```
 
 ## Authors
