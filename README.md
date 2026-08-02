@@ -18,7 +18,7 @@ The release adds:
 
 - routing-aware Stage-1 → Stage-2 cascade OOF predictions and a FLOP-matched single-stage comparator;
 - principal filename-group and conservative raw-identifier-linked sensitivity analyses;
-- 5,000-draw paired filename-group bootstrap confidence intervals and error-path decomposition;
+- 5,000-draw paired component-bootstrap confidence intervals and error-path decomposition;
 - development-only source-directory technical classifiers and a 200-permutation negative control;
 - aggregate results for the prespecified 339-image VinDr-PCXR Stage-1 feasibility analysis;
 - post-result lung-field and intensity technical sensitivities, kept separate from the frozen external result;
@@ -125,7 +125,7 @@ For the paper tables without retraining, use the committed sanitised files under
 
 ### Complete 95% confidence intervals
 
-Primary revision results use percentile 95% intervals from 5,000 filename-group bootstrap draws, with identical resampled groups for paired model comparisons. Legacy fixed-exploratory-test tables use their documented 2,000-draw procedure. The fixed test set remains exploratory; uncertainty intervals do not turn it into a confirmatory evaluation.
+Primary revision results use percentile 95% intervals from 5,000 component-bootstrap draws, with identical resampled components for paired model comparisons. The principal analysis resamples filename-group/exact-content constraint components; the conservative analysis resamples raw-identifier-linked/exact-content components. Legacy fixed-exploratory-test tables use their documented 2,000-draw procedure. The fixed test set remains exploratory; uncertainty intervals do not turn it into a confirmatory evaluation.
 
 | File | Contents |
 |---|---|

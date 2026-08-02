@@ -11,3 +11,5 @@ This directory contains sanitized, aggregate-only outputs for manuscript revisio
 The frozen whole-image run is the prespecified external result. Lung-field cropping and crop-plus-intensity runs were performed after that result was observed and are exploratory technical sensitivities. `vindr_internal_oof` is internal image-level OOF within the target subset and is not external validation.
 
 The external threshold was 0.8201918601989746. It was selected on the prespecified internal group-disjoint validation partition before any VinDr-PCXR inference and was distinct from the fold-specific thresholds used for development OOF evaluation.
+
+For the internal OOF confidence intervals, the principal analysis resampled filename-group/exact-content constraint components, whereas the conservative analysis resampled raw-identifier-linked/exact-content components. Both used 5,000 percentile-bootstrap draws, and paired model comparisons reused identical component draws.
