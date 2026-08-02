@@ -1,0 +1,41 @@
+{
+  "status": "FINAL_PENDING_TWO_AUTHOR_APPROVAL",
+  "primary_measure": "planned_supervised_training_flops",
+  "secondary_measure": "observed_gpu_hours",
+  "tolerance": 0.05,
+  "training_flops_definition": "forward_flops_per_sample_times_3_times_samples_processed",
+  "cascade_cost": {
+    "components": [
+      "stage1_inner_selection",
+      "stage1_outer_training",
+      "stage2_inner_selection",
+      "stage2_outer_training"
+    ]
+  },
+  "single_stage_cost": {
+    "components": [
+      "single_stage_inner_selection",
+      "single_stage_outer_training"
+    ]
+  },
+  "adjustment_allowed": {
+    "variable": "max_optimizer_steps",
+    "timing": "before_any_outer_oof_prediction",
+    "basis": [
+      "dry_run_forward_flops",
+      "fold_sample_counts",
+      "fixed_batch_sizes"
+    ]
+  },
+  "prohibited": [
+    "adjustment_after_outer_metrics",
+    "adjustment_based_on_validation_performance",
+    "changing_architecture",
+    "changing_input_size",
+    "changing_learning_rate"
+  ],
+  "failure": {
+    "if_planned_difference_exceeds_tolerance": "CONFIG_FLOP_PREFLIGHT_FAILED",
+    "action": "stop_before_phase4"
+  }
+}

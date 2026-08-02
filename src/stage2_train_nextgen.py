@@ -24,11 +24,11 @@ The script:
 9. Supports completed-run reuse with --resume.
 
 Recommended location:
-    D:\pneumonia_two_stage_study\src\stage2_train_nextgen.py
+    <repository>\src\stage2_train_nextgen.py
 
 Example:
     python -m src.stage2_train_nextgen ^
-        --project-root "D:\pneumonia_two_stage_study" ^
+        --project-root "<repository>" ^
         --model xrv_densenet121 ^
         --device cuda ^
         --resume

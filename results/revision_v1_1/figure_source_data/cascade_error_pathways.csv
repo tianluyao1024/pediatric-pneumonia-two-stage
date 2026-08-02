@@ -1,0 +1,5 @@
+analysis,error_pathway,count,proportion
+main,correct,4261,0.8068547623556145
+main,stage1_false_positive,24,0.0045445938269267185
+main,stage1_false_negative,220,0.041658776746828254
+main,stage2_subtype_error,776,0.14694186707063056

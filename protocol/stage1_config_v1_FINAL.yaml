@@ -1,0 +1,42 @@
+{
+  "status": "TRAINING_AUTHORIZED_AFTER_FLOP_PREFLIGHT_AND_TWO_AUTHOR_APPROVAL",
+  "role": "primary_cascade_stage1",
+  "model_name": "pneunet",
+  "task": "normal_vs_pneumonia",
+  "architecture": {
+    "backbone": "efficientnet_b0",
+    "initialization": "imagenet",
+    "feature_channels": 1280,
+    "attention": "cbam",
+    "pooling": "learnable_gem",
+    "dropout": 0.35,
+    "output": "one_logit"
+  },
+  "input": {
+    "size": 224,
+    "channels": 3,
+    "normalization": "imagenet"
+  },
+  "training": {
+    "loss": "bce_with_logits",
+    "positive_class": "pneumonia",
+    "class_weighting": "none",
+    "optimizer": "adamw",
+    "learning_rate": 0.0003,
+    "weight_decay": 0.0001,
+    "scheduler": "none",
+    "batch_size": 8,
+    "max_epochs": 12,
+    "checkpoint_metric": "inner_validation_roc_auc",
+    "early_stopping_patience": 3,
+    "gradient_clip_norm": 5.0
+  },
+  "threshold": {
+    "source": "inner_group_disjoint_validation",
+    "criterion": "youden_j",
+    "tie_break": "closest_to_0.5"
+  },
+  "inference": {
+    "tta": false
+  }
+}

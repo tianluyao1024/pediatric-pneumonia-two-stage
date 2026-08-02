@@ -1,0 +1,20 @@
+{
+  "status": "TRAINED_AND_USED_FOR_APPROVED_ONE_TIME_EXTERNAL_INFERENCE",
+  "development_images": 5281,
+  "selection_validation_images": 1119,
+  "training_images_for_selection": 4162,
+  "seed": 20260719,
+  "inner_validation_source": "pre-frozen main outer_fold 0",
+  "checkpoint_selection_metric": "inner_validation_roc_auc",
+  "selection_epoch": 4,
+  "threshold_source": "inner_group_disjoint_validation",
+  "threshold_criterion": "youden_j",
+  "threshold": 0.8201918601989746,
+  "threshold_role": "full-development external inference only; distinct from fold-specific OOF thresholds",
+  "checkpoint_sha256": "1b54cedec02923e8a21cbcc6956c882446be23c58c4b14c2090f2f3aa0e7ca24",
+  "preprocessing_sha256": "1cc0efe925ff2094c95025858862002076256cbe7d17f12dad666a5e727097fd",
+  "inference_code_sha256": "1fe11e171c8331943f34d066819693e8bdc2fba832ae0c8f45216546cbb3d2b8",
+  "fixed_exploratory_test_access": false,
+  "external_images_accessed": true,
+  "inference_run": true
+}

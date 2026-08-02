@@ -1,0 +1,30 @@
+status: USER_APPROVED_PENDING_TWO_AUTHOR_INFERENCE_APPROVAL
+mapping_version: v1.1
+supersedes: external_label_mapping_v1.0.yaml
+protocol_amendment: protocol/protocol_amendment_v1.3.md
+dataset: VinDr-PCXR v1.0.0
+evaluation_role: external_stage1_feasibility_evaluation_only
+source_partition: original_test
+external_unit: anonymous_image_id
+patient_level_claims: prohibited
+view_assurance:
+  method: source_level_release_documentation
+  source_statement: released pediatric cohort described as PA chest radiographs
+  per_image_dicom_viewposition: absent_in_all_339_audited_files
+  per_image_dicom_modality: absent_in_all_339_audited_files
+  inference_scope_limitation: source-level PA evidence only; not per-image verification
+negative_label:
+  name: no_finding
+  rule: No finding == 1 AND every other image-level label == 0
+positive_label:
+  name: pneumonia_related_dataset_label
+  rule: (Pneumonia == 1 OR Brocho-pneumonia == 1) AND every other image-level label == 0
+required_integrity_checks:
+  sha256_match: true
+  dicom_parseable: true
+  pixel_array_decodable: true
+prohibitions:
+  - no Stage 2 evaluation
+  - no pathology, microbiological, or clinical-diagnosis claim
+  - no tuning of checkpoint, preprocessing, threshold, or inclusion rule after results exist
+  - no patient-level or per-image-view-verification claim

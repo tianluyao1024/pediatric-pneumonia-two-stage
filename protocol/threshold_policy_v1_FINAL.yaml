@@ -1,0 +1,26 @@
+{
+  "status": "FINAL_PENDING_TWO_AUTHOR_APPROVAL",
+  "stage1": {
+    "source": "inner_group_disjoint_validation",
+    "criterion": "youden_j",
+    "tie_break": "threshold_closest_to_0.5"
+  },
+  "stage2": {
+    "source": "inner_group_disjoint_validation",
+    "criterion": "f1_viral",
+    "tie_break": "threshold_closest_to_0.5"
+  },
+  "single_stage": {
+    "decision_rule": "argmax_probability"
+  },
+  "prohibitions": [
+    "threshold_reuse_across_outer_folds",
+    "pooled_oof_threshold_optimization"
+  ],
+  "metric_edge_cases": {
+    "zero_division": 0,
+    "absent_reference_class_bootstrap": "discard_replicate",
+    "absent_predicted_class": "retain_replicate",
+    "probability_tie_rule": "lowest_class_index"
+  }
+}

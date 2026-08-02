@@ -1,0 +1,46 @@
+{
+  "status": "TRAINING_AUTHORIZED_AFTER_FLOP_PREFLIGHT_AND_TWO_AUTHOR_APPROVAL",
+  "role": "primary_matched_comparator",
+  "model_name": "pneunet3_matched",
+  "architecture": {
+    "backbone": "efficientnet_b0",
+    "initialization": "imagenet",
+    "feature_channels": 1280,
+    "attention": "cbam",
+    "pooling": "learnable_gem",
+    "dropout": 0.35,
+    "output_classes": [
+      "normal",
+      "bacterial",
+      "viral"
+    ]
+  },
+  "input": {
+    "size": 224,
+    "normalization": "imagenet"
+  },
+  "training": {
+    "loss": "class_weighted_cross_entropy",
+    "class_weights": {
+      "rule": "inverse_frequency_from_current_outer_training_fold",
+      "normalization": "mean_equals_one",
+      "historical_fixed_weights_prohibited": true
+    },
+    "optimizer": "adamw",
+    "learning_rate": 0.0002,
+    "weight_decay": 0.0001,
+    "scheduler": "none",
+    "batch_size": 16,
+    "max_epochs": 12,
+    "checkpoint_metric": "inner_validation_macro_f1",
+    "early_stopping": {
+      "patience": 3,
+      "active_after_epoch": 5
+    },
+    "gradient_clip_norm": 5.0,
+    "max_optimizer_steps": "controlled_by_budget_match_plan_by_outer_fold"
+  },
+  "decision": {
+    "rule": "argmax_probability"
+  }
+}

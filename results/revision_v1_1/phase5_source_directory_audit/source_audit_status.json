@@ -1,0 +1,13 @@
+{
+  "status": "COMPLETE",
+  "scope": "development cohort only",
+  "fixed_exploratory_test_access": false,
+  "source_interpretation": "source-directory-associated technical variation; not hospital/device/domain metadata",
+  "n_development_images": 5281,
+  "n_binary_source_images": 5265,
+  "excluded_source_directory_counts": {
+    "val": 16
+  },
+  "bootstrap_replicates": 5000,
+  "label_permutations": 200
+}

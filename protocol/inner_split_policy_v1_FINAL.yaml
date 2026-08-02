@@ -1,0 +1,29 @@
+{
+  "status": "FINAL_PENDING_TWO_AUTHOR_APPROVAL",
+  "method": "stratified_group_kfold",
+  "n_splits": 5,
+  "shuffle": true,
+  "base_seed": 20260719,
+  "seed_rule": "base_seed + outer_fold",
+  "selected_inner_validation_fold": 0,
+  "retry_policy": "prohibited",
+  "main_analysis": {
+    "grouping_column": "main_constraint_component_id",
+    "stratification_label": "three_class_label"
+  },
+  "conservative_analysis": {
+    "grouping_column": "conservative_constraint_component_id",
+    "stratification_label": "three_class_label"
+  },
+  "inheritance": {
+    "stage1": "complete_outer_training_inner_assignment",
+    "stage2": "inherit_complete_cohort_inner_assignment_then_subset_pneumonia",
+    "single_stage": "complete_outer_training_inner_assignment"
+  },
+  "prohibitions": [
+    "no_stage2_pneumonia_only_resplitting",
+    "no_retry_for_better_balance",
+    "no_pooled_oof_threshold_selection",
+    "no_outer_validation_access"
+  ]
+}

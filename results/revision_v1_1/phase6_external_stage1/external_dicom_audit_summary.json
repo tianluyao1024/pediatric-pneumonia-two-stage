@@ -1,0 +1,23 @@
+{
+  "status": "DICOM_AUDIT_GATE_FAILED",
+  "timestamp_utc": "2026-08-02T05:53:52.661271+00:00",
+  "n_approved": 339,
+  "n_sha256_verified": 339,
+  "n_dicom_readable": 339,
+  "n_pixel_array_readable": 339,
+  "n_pa_cr_pass": 0,
+  "modality_counts": {
+    "": 339
+  },
+  "view_position_counts": {
+    "": 339
+  },
+  "failure_reason_counts": {
+    "modality_tag_absent": 339
+  },
+  "model_loaded": false,
+  "inference_run": false,
+  "fixed_exploratory_test_access": false,
+  "stage2_evaluation": false,
+  "claim_scope": "external Stage-1 dataset-label feasibility evaluation only"
+}

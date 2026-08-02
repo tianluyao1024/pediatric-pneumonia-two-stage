@@ -1,0 +1,35 @@
+status: FOLD_ASSIGNMENTS_FROZEN_TRAINING_CONFIGS_PENDING_APPROVAL
+protocol: auditable_revision_protocol_v1.2
+development_cohort:
+  splits: [train, validation]
+  n_images_expected: 5281
+  labels: {normal: 1425, bacterial: 2524, viral: 1332}
+fixed_exploratory_test_set:
+  n_images: 575
+  role: descriptive_exploratory_only
+  model_selection_or_training_access: prohibited
+outer_fold_policy:
+  n_splits: 5
+  seed: 20260719
+  method: StratifiedGroupKFold
+  main_grouping: subtype_namespaced_filename_group_plus_exact_sha256_component
+  sensitivity_grouping: conservative_raw_identifier_linked_plus_exact_sha256_component
+  stage2_fold_policy: inherit_from_complete_development_cohort
+  reassignment_after_training: prohibited
+primary_estimand:
+  name: delta_macro_f1
+  definition: macro_f1_cascade - macro_f1_matched_single_stage
+  population: complete_development_cohort
+  predictions: concatenated_outer_fold_oof_predictions
+  resampling_unit: filename_group_constraint_component
+  bootstrap_replicates: 5000
+  bootstrap_ci: percentile_95
+  pairing: identical_resampled_groups
+  invalid_replicate_policy: discard_if_any_reference_class_absent
+  decision_rule:
+    ci_lower_gt_0: evidence_favoring_cascade
+    ci_upper_lt_0: evidence_favoring_matched_single_stage
+    otherwise: no_conclusive_difference
+threshold_policy: CONFIGURATION_PENDING_APPROVAL
+training_configurations: CONFIGURATION_PENDING_APPROVAL
+phase4_permission: blocked_until_stage1_stage2_inner_split_and_budget_configs_are_approved

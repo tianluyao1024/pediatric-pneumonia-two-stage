@@ -1,0 +1,28 @@
+status: FROZEN_POST_RESULT_TECHNICAL_SENSITIVITY
+input_coordinates: data_derived/lung_crop_v1/lung_crop_manifest_v1.csv
+geometry:
+  base: v1_lung_crop_bbox
+  output_crop: smallest_centered_square_covering_bbox
+  boundary_rule: shift_without_changing_side_length
+intensity:
+  statistics_pixels: nonzero_pixels_within_square_thoracic_crop
+  center: median
+  scale: IQR_divided_by_1.349
+  minimum_scale_8bit: 5.0
+  robust_z_clip: [-3.0, 3.0]
+  output_range_8bit: [0, 255]
+classifier_input:
+  size: 224
+  resize: direct_square_resize
+  padding: none
+  channels: 3
+  normalization: imagenet
+applies_to:
+  development_images: 5281
+  external_images: 339
+prohibitions:
+  - no label-dependent transform
+  - no prediction-dependent transform
+  - no external threshold optimization
+  - no fixed exploratory test access
+

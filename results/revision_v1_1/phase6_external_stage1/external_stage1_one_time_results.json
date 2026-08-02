@@ -1,0 +1,59 @@
+{
+  "status": "COMPLETE_EXTERNAL_STAGE1_DATASET_LABEL_FEASIBILITY_EVALUATION",
+  "scope": "VinDr-PCXR v1.0.0 approved 339-image subset; source-level PA evidence only",
+  "n_images": 339,
+  "n_positive_dataset_label": 139,
+  "n_negative_no_finding": 200,
+  "checkpoint_sha256": "1b54cedec02923e8a21cbcc6956c882446be23c58c4b14c2090f2f3aa0e7ca24",
+  "threshold": 0.8201918601989746,
+  "fixed_exploratory_test_access": false,
+  "stage2_inference": false,
+  "metrics": {
+    "auroc": 0.6423741007194245,
+    "auprc": 0.5584567306236344,
+    "accuracy": 0.6106194690265486,
+    "sensitivity": 0.06474820143884892,
+    "specificity": 0.99,
+    "ppv": 0.8181818181818182,
+    "npv": 0.6036585365853658,
+    "brier_score": 0.3568234787454566,
+    "calibration_intercept": 0.4588941761664054,
+    "calibration_slope": 0.11673872732359494,
+    "bootstrap_replicates_valid": 5000
+  },
+  "bootstrap_percentile_95ci": {
+    "auroc": [
+      0.5832362970445296,
+      0.7006216664133388
+    ],
+    "auprc": [
+      0.47816696590570784,
+      0.6453269508730828
+    ],
+    "accuracy": [
+      0.5575221238938053,
+      0.6607669616519174
+    ],
+    "sensitivity": [
+      0.027972027972027972,
+      0.10898437499999986
+    ],
+    "specificity": [
+      0.9744897959183674,
+      1.0
+    ],
+    "ppv": [
+      0.5555555555555556,
+      1.0
+    ],
+    "npv": [
+      0.5501519756838906,
+      0.6554903378527743
+    ],
+    "brier_score": [
+      0.3095134601997376,
+      0.40577550291900666
+    ]
+  },
+  "inference_timestamp_utc": "2026-08-02T07:19:28.012645+00:00"
+}
